@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chowbees</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #fef3c7;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            font-size: 4rem;
+            color: #ffcc00;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            position: absolute;
+            z-index: 1;
+        }
+
+        .bee {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: url('https://i.imgur.com/yXW8qOo.png') no-repeat center center;
+            background-size: contain;
+            animation: fly 5s linear infinite;
+        }
+
+        @keyframes fly {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            25% {
+                transform: translate(200px, -100px) rotate(45deg);
+            }
+            50% {
+                transform: translate(0, -200px) rotate(90deg);
+            }
+            75% {
+                transform: translate(-200px, -100px) rotate(135deg);
+            }
+            100% {
+                transform: translate(0, 0) rotate(180deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Chowbees</h1>
+
+    <div class="bee" style="animation-delay: 0s;"></div>
+    <div class="bee" style="animation-delay: 1s;"></div>
+    <div class="bee" style="animation-delay: 2s;"></div>
+
+    <script>
+        // Adjust the number of bees if needed
+        const beeCount = 5;
+        const body = document.body;
+
+        for (let i = 3; i < beeCount; i++) {
+            const bee = document.createElement('div');
+            bee.className = 'bee';
+            bee.style.animationDelay = `${Math.random() * 5}s`;
+            body.appendChild(bee);
+        }
+    </script>
+</body>
+</html>
