@@ -3,74 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chowbees</title>
+    <title>Chowbees - Tech Content & Apps</title>
     <style>
+        /* CSS Styles */
         body {
-            margin: 0;
-            background: url('https://cdn.pixabay.com/photo/2015/12/01/20/28/honeycomb-1076796_1280.jpg') no-repeat center center;
-            background-size: cover;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
         }
 
-        h1 {
-            font-size: 4rem;
-            color: #ffcc00;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-            position: absolute;
-            z-index: 1;
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
         }
 
-        .bee {
-            position: absolute;
-            width: 50px;
-            height: 50px;
-            background: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHE1MWg2eG14YzE5Y3cxMjY5NW1yaTZnYnd0aWJtaHNhbjRqNmRodCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/dAQm2Zbd1YWomvMGd4/giphy.gif') no-repeat center center;
-            background-size: contain;
-            animation: fly 5s linear infinite;
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
-        @keyframes fly {
-            0% {
-                transform: translate(0, 0) rotate(0deg);
-            }
-            25% {
-                transform: translate(200px, -100px) rotate(45deg);
-            }
-            50% {
-                transform: translate(0, -200px) rotate(90deg);
-            }
-            75% {
-                transform: translate(-200px, -100px) rotate(135deg);
-            }
-            100% {
-                transform: translate(0, 0) rotate(180deg);
-            }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px 20px;
+            background-color: #007BFF;
+            color: #fff;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #fff;
+            color: #007BFF;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .about, .content, .future, .contact {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .about h2, .content h2, .future h2, .contact h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .about p, .content p, .future p, .contact p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
         }
     </style>
 </head>
 <body>
-    <h1>Chowbees</h1>
+    <header>
+        <nav>
+            <div class="logo">Chowbees</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#content">Content</a></li>
+                <li><a href="#future">Future Apps</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="bee" style="animation-delay: 0s;"></div>
-    <div class="bee" style="animation-delay: 1s;"></div>
-    <div class="bee" style="animation-delay: 2s;"></div>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Chowbees</h1>
+            <p>Your go-to place for tech content and future app development.</p>
+            <a href="https://youtube.com/@chowbees" class="btn" target="_blank">Visit Our YouTube Channel</a>
+        </div>
+        <div class="hero-image">
+            <img src="mylogo.jpg" alt="Chowbees Tech Content">
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>Chowbees is dedicated to providing high-quality tech content through our YouTube channel and developing innovative apps in the future.</p>
+    </section>
+
+    <section id="content" class="content">
+        <h2>Our Content</h2>
+        <p>Explore our latest tech tutorials, reviews, and more on our YouTube channel.</p>
+        <a href="https://www.youtube.com/channel/yourchannel" class="btn" target="_blank">Watch Now</a>
+    </section>
+
+    <section id="future" class="future">
+        <h2>Future Apps</h2>
+        <p>Stay tuned for our upcoming apps designed to make your life easier and more productive.</p>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions or want to collaborate? Reach out to us!</p>
+        <a href="mailto:info@chowbees.com" class="btn">Email Us</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Chowbees. All rights reserved.</p>
+    </footer>
 
     <script>
-        // Adjust the number of bees if needed
-        const beeCount = 5;
-        const body = document.body;
-
-        for (let i = 3; i < beeCount; i++) {
-            const bee = document.createElement('div');
-            bee.className = 'bee';
-            bee.style.animationDelay = `${Math.random() * 5}s`;
-            body.appendChild(bee);
-        }
+        // JavaScript (if needed)
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Chowbees website loaded!');
+        });
     </script>
 </body>
 </html>
